@@ -1,14 +1,12 @@
 // DEPENDENCIES 
 const exphbs = require("express-handlebars");
 const express = require("express");
-const mysql = require("mysql");
-
 
 const app = express();
 
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku
-const PORT = process.env.PORT || 8080;
+// const PORT = process.env.PORT || 8080;
 
 // EXPRESS MIDDLEWARE
 // Use the express.static middleware to serve static content for the app from the "public" directory in the application directory.
