@@ -6,5 +6,7 @@
         Munch!
     </button>{{/if}}
 
-    <button class="delete-burger btn-danger" data-id="{{id}}">Bad Burger!!</button>
+    <button class="delete-burger btn-danger" data-id="{{id}}">
+        {{#if devoured}}Waste good food!{{else}}Digest{{/if}}
+    </button>
 </li>
