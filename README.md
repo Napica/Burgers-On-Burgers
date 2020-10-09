@@ -73,12 +73,12 @@ I would like to thank Andrew Seigel, Jonathan Canales, Raleigh Chesney and Jonat
   <hr>
   Welcome to the site!
 
-  ![itemLinks](public\img\readme1.png)
+  ![itemLinks](public/img/readme1.png)
 
 <br/>
 
 ### If the user munches on the burger, they have conquered that munch!
-  ![itemLinks](public\img\readme2.png)
+  ![itemLinks](public/img/readme2.png)
 
 <br/>
 
@@ -86,19 +86,19 @@ I would like to thank Andrew Seigel, Jonathan Canales, Raleigh Chesney and Jonat
 
 <br/>
 
-  ![itemLinks](public\img\readme3.png)
+  ![itemLinks](public/img/readme3.png)
 
 ### The burger will be added to munch on!
 
 <br/>
 
-  ![itemLinks](public\img\readme4.png)
+  ![itemLinks](public/img/readme4.png)
 
 ###  Once the user has eaten the burger, they can fully digest it and get rid of it completely!
 
 <br/>
 
-  ![itemLinks](public\img\readme5.png)
+  ![itemLinks](public/img/readme5.png)
 
 <br/>
 
