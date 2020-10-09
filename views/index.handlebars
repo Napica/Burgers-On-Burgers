@@ -3,19 +3,17 @@
 <h2>Burgers on served burgers</h2>
 
 <ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
+  {{#each burgers}}
+      {{> burgers/burger-block devoured=false}}
   {{/each}}
 </ul>
 
 <h2>Burgers devoured</h2>
 
 <ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
     {{/if}}
   {{/each}}
 </ul>
