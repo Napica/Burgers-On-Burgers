@@ -20,7 +20,7 @@
       </ul>
     </div>
 
-    <div class="col-sm-2"></div>
+    <div class="col-sm-2 text-center"></div>
 
     <div class="float-right col-sm-5 text-center">
       <h2>Burgers Conquered!</h2>
@@ -28,7 +28,7 @@
       <ul>
         {{#each burgers}}
         {{#if devoured}}
-        {{> burgers/burger-block devaured=false}}
+        {{> burgers/burger-block devoured=false}}
         {{/if}}
         {{/each}}
       </ul>
