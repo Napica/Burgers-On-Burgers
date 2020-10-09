@@ -16,14 +16,18 @@ router.get("/", function (req, res) {
 });
 
 router.post("/", function (req, res) {
-  burgers.create(["name", "devoured"], [req.body.name], function (
-    result
-  ) {
+  burgers.create(["name", "devoured"], [req.body.name], function () {
     // Send back the ID of the new quote
     res.redirect("/");
   });
 });
 
-
+router.put("/:id", function (req, res) {
+  var condition = "id = " + req.params.id;
+  console.log("condition", condition);
+  burgers.update({ devoured: req.body.devoured }, condition, function () {
+    res.redirect("/");
+  });
+});
 
 module.exports = router;
