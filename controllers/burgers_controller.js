@@ -15,18 +15,28 @@ router.get("/", function (req, res) {
   });
 });
 
-router.post("/", function (req, res) {
-  burgers.create(["name", "devoured"], [req.body.name], function () {
-    // Send back the ID of the new quote
-    res.redirect("/");
-  });
+router.post("/api/burgers", function (req, res) {
+  burgers.create(
+    ["name", "devoured"],
+    [req.body.name, req.body.devoured],
+    function (result) {
+      // Send back the ID of the new quote
+      res.json({ id: result.insertId });
+    }
+  );
 });
 
-router.put("/:id", function (req, res) {
+router.put("/api/burgers/:id", function (req, res) {
   var condition = "id = " + req.params.id;
-  // console.log("condition", condition);
-  burgers.update({ devoured: req.body.devoured }, condition, function () {
-    res.redirect("/");
+
+  console.log("condition", condition);
+  console.log("this: " + req.body.devoured)
+  burgers.update({ devoured: req.body.devoured }, condition, function (result) {
+    if (result.changedRows == 0) {
+      return res.status(404).end();
+    } else {
+      res.status(200).end();
+    }
   });
 });
 

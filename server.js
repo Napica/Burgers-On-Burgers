@@ -10,10 +10,12 @@ const PORT = process.env.PORT || 8080;
 
 // EXPRESS MIDDLEWARE
 // Use the express.static middleware to serve static content for the app from the "public" directory in the application directory.
-app.use(express.static("public"));
+// app.use(express.static("public"));
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+app.use(express.static("public"));
 
 // HANDLEBAR's MIDDLEWARE
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
